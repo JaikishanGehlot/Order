@@ -1,0 +1,38 @@
+{
+  "name": "Order",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/postgres": "^1.8.0",
+    "@sap/cds": "^7",
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "passport": "^0"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7.9.2",
+    "@sap/ux-specification": "^1.120.10"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-order": "cds watch --open order/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "impl": "@cap-js/postgres",
+        "pool": {
+          "max": 20
+        }
+      },
+      "auth": "xsuaa"
+    }
+  },
+  "sapux": [
+    "app/order"
+  ]
+}

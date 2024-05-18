@@ -1,0 +1,22 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.OrderAdmin",
+      "description": "OrderAdmin"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "OrderAdmin",
+      "description": "Role for Administration of Order",
+      "scope-references": [
+        "$XSAPPNAME.OrderAdmin"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": ["https://*.cfapps.us10-001.hana.ondemand.com/**"]
+ }
+  
+}
